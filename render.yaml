@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: memory-management-visualizer
+    runtime: java
+    region: oregon
+    plan: free
+    rootDir: backend
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/memory-management-visualizer-0.0.1-SNAPSHOT.jar
+    envVars:
+      - key: JAVA_VERSION
+        value: 21
