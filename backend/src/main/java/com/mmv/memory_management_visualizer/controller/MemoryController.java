@@ -6,7 +6,13 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/memory")
-@CrossOrigin(origins = {"http://localhost:5173", "http://localhost:4173"}, originPatterns = {"https://*.vercel.app"})
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "http://localhost:4173"
+}, originPatterns = {
+    "https://*.vercel.app",
+    "https://*.onrender.com"
+})
 public class MemoryController {
 
     private final MemoryService memoryService;

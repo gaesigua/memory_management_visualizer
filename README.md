@@ -58,10 +58,14 @@ The frontend runs on `http://localhost:5173`.
 
 ### Backend on Render
 
-1. Create a new Render Web Service from the `backend/` folder.
-2. Use the build command: `./mvnw clean package`
-3. Use the start command: `java -jar target/memory-management-visualizer-0.0.1-SNAPSHOT.jar`
-4. Set the service port to Render's provided `PORT` environment variable if needed.
+Render deploys this backend as a Dockerized Web Service.
+
+1. Create a new Render Web Service and connect this repository.
+2. Choose the `Docker` runtime.
+3. Set the root directory to the repository root.
+4. Use the Dockerfile at `backend/Dockerfile`.
+5. Add no custom environment variables unless you later introduce external services.
+6. Deploy the service and use the generated Render URL in the frontend env config.
 
 ### Frontend on Vercel
 
@@ -74,6 +78,10 @@ The frontend runs on `http://localhost:5173`.
 
 - The backend allows local Vite development origins and Vercel preview/production domains.
 - If you use a custom frontend domain, add it to the backend CORS configuration.
+
+### Render with Docker
+
+If you prefer blueprint deployment, Render can also use the included `render.yaml`, but the Dockerfile is the primary deployment path for the backend.
 
 ## Usage
 
