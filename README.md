@@ -56,6 +56,11 @@ The frontend runs on `http://localhost:5173`.
 
 ## Deployment
 
+### Live Deployment
+
+- Frontend: replace with your Vercel deployment URL
+- Backend: https://memory-management-visualizer.onrender.com
+
 ### Backend on Render
 
 Render deploys this backend as a Dockerized Web Service.
@@ -82,6 +87,13 @@ Render deploys this backend as a Dockerized Web Service.
 ### Render with Docker
 
 If you prefer blueprint deployment, Render can also use the included `render.yaml`, but the Dockerfile is the primary deployment path for the backend.
+
+## Production Checklist
+
+- Confirm the frontend points to `https://memory-management-visualizer.onrender.com` through `VITE_API_BASE_URL`.
+- Verify allocate, deallocate, and refresh work in the deployed frontend.
+- Keep the backend deployed from `backend/Dockerfile` so Render uses the Java runtime correctly.
+- Update the live URLs here if either deployment target changes.
 
 ## Usage
 
