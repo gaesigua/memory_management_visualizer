@@ -58,7 +58,7 @@ The frontend runs on `http://localhost:5173`.
 
 ### Live Deployment
 
-- Frontend: replace with your Vercel deployment URL
+- Frontend: https://memory-management-visualizer-sooty.vercel.app/
 - Backend: https://memory-management-visualizer.onrender.com
 
 ### Backend on Render
